@@ -1,34 +1,43 @@
-// ParentNode
 let itemList = document.querySelector("#items");
-// console.log(itemList.parentNode);
 
-// 1 - ParentElement
-// let itemList = document.querySelector("#items");
-// console.log(itemList.parentElement.parentElement);
-// itemList.parentElement.style.backgroundColor = "#f4f4f4";
+// createElement
 
-// 2 - lastelementchild
-// console.log(itemList.lastElementChild);
+let newDiv = document.createElement("div");
+// Adding className
+newDiv.className = "Hello";
 
-// // 3 - lastchild
-// console.log(itemList.lastChild);
+// Adding id
+newDiv.id = "Hello1";
 
-// // 4 - createchild
+// Adding Attribute
+newDiv.setAttribute("title", "Hello Div");
 
-// // 5 - firstelementchild
-// console.log(itemList.firstElementChild);
+// create text node
+let newDivText = document.createTextNode("HEllo");
 
-// // 6-firstchild
-// console.log(itemList.firstChild);
+// Appending text node into div
+newDiv.appendChild(newDivText);
 
-// // 7- nextsibling
-// console.log(itemList.nextSibling);
+let container = document.querySelector("header .container");
+let h1 = document.querySelector("header h1");
 
-// // 8- nextelementsibling
-// console.log(itemList.nextElementSibling) //--give null
+container.insertBefore(newDiv, h1);
 
-// // 9- previoussibling
-// console.log(itemList.previousSibling)
+let newDiv1 = document.createElement("div");
 
-// // 10 - previouselementsibling
-// console.log(itemList.previouselementsibling);
+newDiv1.className = "HEllo";
+
+// Adding id
+newDiv1.id = "HeHEllollo1";
+
+// Adding Attribute
+newDiv1.setAttribute("title", "HEllo Div1");
+
+let newDiv1Text = document.createTextNode("HEllo");
+
+newDiv1.appendChild(newDiv1Text);
+
+let itemContainer = document.querySelector("#items");
+let item1Text = document.querySelector(".list-group-item");
+
+itemContainer.insertBefore(newDiv1, item1Text);
